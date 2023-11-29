@@ -150,7 +150,7 @@
             var API_HOST = gadget.get('apihost'); // the API server host
             console.log(API_HOST);
             // Example GET request to /files/list 
-            var files = $.ajax(API_HOST + '/files/list?authorization_token=' + API_TOKEN + '&site=' + gadget.get('site'));
+            var files = $.ajax(API_HOST + '/files/list?authorization_token=' + APITOKEN + '&site=' + gadget.get('site'));
 			console.log(files);
             var color = gadget.getConfig('initial_color');
 			setColor(color);
