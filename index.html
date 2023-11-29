@@ -152,6 +152,12 @@
             // Example GET request to /files/list 
             var files = $.ajax(API_HOST + '/files/list?authorization_token=' + APITOKEN + '&site=' + gadget.get('site'));
 			console.log(files);
+
+            var multieditFiles = $.ajax(API_HOST + '/files/multiedit?authorization_token=' + APITOKEN + '&site=' + gadget.get('site')
+            + '&path=' + gadget.get('directory')
+            );
+			console.log(multieditFiles);
+
             var color = gadget.getConfig('initial_color');
 			setColor(color);
 		});
